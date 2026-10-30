@@ -22,14 +22,14 @@ class PedidoService {
 
         const tipoNormalizado = typeof tipo === 'string' ? tipo.trim().toLowerCase() : '';
         if (!TIPOS_PERMITIDOS.includes(tipoNormalizado)) {
-            const erro = new Error(`O campo "tipo" deve ser um dos seguintes valores: ${TIPOS_PERMITIDOS.join(', ')}.`);
+            const erro = new Error(`O campo 'tipo' deve ser um dos seguintes valores: ${TIPOS_PERMITIDOS.join(', ')}.`);
             erro.status = 400;
             throw erro;
         }
 
         const prioridadeNormalizada = typeof prioridade === 'string' ? prioridade.trim().toLowerCase() : '';
         if (!PRIORIDADES_PERMITIDAS.includes(prioridadeNormalizada)) {
-            const erro = new Error(`O campo "prioridade" deve ser um dos seguintes valores: ${PRIORIDADES_PERMITIDAS.join(', ')}.`);
+            const erro = new Error(`O campo 'prioridade' deve ser um dos seguintes valores: ${PRIORIDADES_PERMITIDAS.join(', ')}.`);
             erro.status = 400;
             throw erro;
         }
