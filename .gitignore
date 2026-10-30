@@ -1,2 +1,6 @@
 
 node_modules/
+
+*.docx.pdf
+
+Api-manage-order/
