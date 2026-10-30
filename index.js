@@ -15,8 +15,10 @@ app.use((req, res) => {
     res.status(404).json({ mensagem: 'Rota não encontrada.' });
 });
 
-app.listen(PORT, () => {
-    console.log('Máquina serve à porta ' + PORT);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log('Máquina serve à porta ' + PORT);
+    });
+}
 
 module.exports = app;
